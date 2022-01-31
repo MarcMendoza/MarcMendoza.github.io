@@ -1,12 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+const App = () => {
   let startDate = new Date(2021, 1, 1);
   let oneDay = 1000 * 60 * 60 * 24;
   let today = new Date();
 
-  let numOfDaysDif = (today.getTime() - startDate.getTime()) / oneDay;
+  let numOfDaysDif = Math.floor((today.getTime() - startDate.getTime()) / oneDay);
   let isEven = numOfDaysDif % 2
 
   return (
